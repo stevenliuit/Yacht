@@ -70,17 +70,17 @@ const routes = [
     children: [
       {
         path: "",
-        name: "View Templates",
+        name: "查看模板",
         component: TemplatesList // perhaps rename to TemplatesIndex
       },
       {
         path: "new",
-        name: "New Template",
+        name: "新模板",
         component: TemplatesForm // perhaps rename to TemplatesCreate
       },
       {
         path: ":templateId",
-        name: "Template Details",
+        name: "模板详细",
         component: TemplatesShow // perhaps rename to TemplateDetails
       }
     ]
@@ -90,27 +90,27 @@ const routes = [
     component: Applications,
     children: [
       {
-        name: "Deploy",
+        name: "部署",
         path: "deploy/:appId",
         component: ApplicationsForm
       },
       {
-        name: "Edit",
+        name: "编辑",
         path: "edit/:appName",
         component: ApplicationsForm
       },
       {
-        name: "Deploy from Template",
+        name: "从模板部署",
         path: "templates",
         component: ApplicationDeployFromTemplate
       },
       {
-        name: "View Applications",
+        name: "查看应用",
         path: "/",
         component: ApplicationsList
       },
       {
-        name: "Add Application",
+        name: "添加应用",
         path: "deploy",
         component: ApplicationsForm
       },
@@ -119,22 +119,22 @@ const routes = [
         component: ApplicationDetails,
         children: [
           {
-            name: "Processes",
+            name: "进程",
             path: "top",
             component: AppProcesses
           },
           {
-            name: "Info",
+            name: "信息",
             path: "info",
             component: AppContent
           },
           {
-            name: "Logs",
+            name: "日志",
             path: "logs",
             component: AppLogs
           },
           {
-            name: "Stats",
+            name: "状态",
             path: "stats",
             component: AppStats
           }
@@ -147,17 +147,17 @@ const routes = [
     component: Project,
     children: [
       {
-        name: "View Projects",
+        name: "查看项目",
         path: "/",
         component: ProjectList
       },
       {
-        name: "Edit Project",
+        name: "编辑项目",
         path: ":projectName/edit",
         component: ProjectEditor
       },
       {
-        name: "Project Details",
+        name: "项目详细信息",
         path: ":projectName",
         component: ProjectDetails
       }
@@ -168,12 +168,12 @@ const routes = [
     component: UserSettings,
     children: [
       {
-        name: "User Info",
+        name: "用户信息",
         path: "info",
         component: UserInfo
       },
       {
-        name: "Change Password",
+        name: "修改密码",
         path: "changePassword",
         component: ChangePasswordForm
       }
@@ -184,17 +184,17 @@ const routes = [
     component: ServerSettings,
     children: [
       {
-        name: "Server Info",
+        name: "服务信息",
         path: "info",
         component: ServerInfo
       },
       {
-        name: "Theme",
+        name: "主题",
         path: "theme",
         component: Theme
       },
       {
-        name: "Template Variables",
+        name: "模板变量",
         path: "templateVariables",
         component: ServerVariables
       },
@@ -204,7 +204,7 @@ const routes = [
         component: Prune
       },
       {
-        name: "Update Yacht",
+        name: "更新 Yacht",
         path: "update",
         component: ServerUpdate
       }
@@ -221,7 +221,7 @@ const routes = [
       },
       {
         path: "images/:imageid",
-        name: "Image Details",
+        name: "Image 详细",
         component: ImageDetails
       },
       {
@@ -235,18 +235,18 @@ const routes = [
         component: VolumeDetails
       },
       {
-        name: "Networks",
+        name: "网络",
         path: "networks",
         component: NetworkList
       },
       {
         path: "networks/new",
-        name: "New Network",
+        name: "新 Network",
         component: NetworkForm
       },
       {
         path: "networks/:networkid",
-        name: "Network Details",
+        name: "Network 详细",
         component: NetworkDetails
       }
     ]
