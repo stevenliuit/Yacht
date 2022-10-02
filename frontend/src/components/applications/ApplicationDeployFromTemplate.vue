@@ -1,13 +1,12 @@
 <template lang="html">
   <v-card class="mx-5">
     <v-card-title>
-      Select a template to deploy from
+      选择要部署的模板
     </v-card-title>
     <v-card v-if="templates.length < 1 || templates == undefined">
-      <v-card-title>No Templates Found!</v-card-title>
+      <v-card-title>未找到模板！</v-card-title>
       <v-card-text>
-        No templates available. <a href="/#/templates/new">Add</a> one to view
-        information and launch apps from here.</v-card-text
+        没有可用的模板。 <a href="/#/templates/new">添加</a> 一个从这里查看信息和启动应用程序。</v-card-text
       >
     </v-card>
     <v-tabs v-model="tab" grow v-else>
@@ -75,14 +74,14 @@
                           appDetailsDialog = true;
                         "
                       >
-                        View
+                        查看
                       </v-btn>
                       <v-spacer></v-spacer>
                       <v-btn
                         color="primary"
                         :to="{ name: 'Deploy', params: { appId: item.id } }"
                       >
-                        Deploy
+                        部署
                       </v-btn>
                     </v-card-actions>
                   </v-card>
@@ -124,7 +123,7 @@
                 <p v-if="selectedApp.notes" v-html="selectedApp.notes" />
                 <v-card tile>
                   <v-card-title class="subheading primary font-weight-bold">
-                    General
+                    通用
                   </v-card-title>
                   <v-divider />
                   <v-list class="secondary" dense>
@@ -132,7 +131,7 @@
                       <v-list-item-content
                         ><v-list-item-title
                           class="px-5 text-centered font-weight-bold"
-                          >Name</v-list-item-title
+                          >名称</v-list-item-title
                         ></v-list-item-content
                       >
 
@@ -320,14 +319,14 @@
                 <v-spacer></v-spacer>
 
                 <v-btn text @click="appDetailsDialog = false">
-                  Cancel
+                  返回
                 </v-btn>
                 <v-btn
                   text
                   color="primary"
                   :to="{ name: 'Deploy', params: { appId: selectedApp.id } }"
                 >
-                  Deploy
+                  部署
                 </v-btn>
               </v-card-actions>
             </v-card>

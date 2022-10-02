@@ -36,11 +36,11 @@
 
       <v-card-title color="secondary">
         <v-btn class="ml-2" @click="checkUpdate(apps)" color="secondary">
-          <span v-if="$vuetify.breakpoint.mdAndUp">Updates</span>
+          <span v-if="$vuetify.breakpoint.mdAndUp">更新</span>
           <v-icon>mdi-update</v-icon>
         </v-btn>
         <v-btn class="ml-2" @click="refresh()" color="secondary">
-          <span v-if="$vuetify.breakpoint.mdAndUp">Refresh</span>
+          <span v-if="$vuetify.breakpoint.mdAndUp">刷新</span>
           <v-icon>mdi-refresh</v-icon>
         </v-btn>
         <v-menu
@@ -103,7 +103,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-file-document-edit-outline</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Edit</v-list-item-title>
+                  <v-list-item-title>编辑</v-list-item-title>
                 </v-list-item>
                 <v-list-item
                   v-if="!item.Config.Image.includes('selfhostedpro/yacht')"
@@ -112,7 +112,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-update</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Update</v-list-item-title>
+                  <v-list-item-title>更新</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -121,7 +121,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-play</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Start</v-list-item-title>
+                  <v-list-item-title>启动</v-list-item-title>
                 </v-list-item>
                 <v-list-item
                   @click="AppAction({ Name: item.name, Action: 'stop' })"
@@ -129,7 +129,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-stop</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Stop</v-list-item-title>
+                  <v-list-item-title>停止</v-list-item-title>
                 </v-list-item>
                 <v-list-item
                   @click="AppAction({ Name: item.name, Action: 'restart' })"
@@ -137,7 +137,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-refresh</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Restart</v-list-item-title>
+                  <v-list-item-title>重启</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -158,7 +158,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-delete</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Remove</v-list-item-title>
+                  <v-list-item-title>删除</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -168,14 +168,14 @@
                   Remove {{ selectedApp.name }}?
                 </v-card-title>
                 <v-card-text>
-                  Are you sure you want to permanently remove
+                 您确定要永久删除
                   {{ selectedApp.name }}?<br />
-                  All non peristent data will be removed.
+                  所有非持久性数据将被删除。
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn text @click="removeDialog = false">
-                    Cancel
+                    返回
                   </v-btn>
                   <v-btn
                     text
@@ -185,7 +185,7 @@
                       removeDialog = false;
                     "
                   >
-                    Remove
+                    删除
                   </v-btn>
                 </v-card-actions>
               </v-card>
@@ -206,7 +206,7 @@
                   size="6"
                 ></v-avatar>
               </template>
-              <span>Update Available</span>
+              <span>可用更新</span>
             </v-tooltip>
           </div>
         </template>

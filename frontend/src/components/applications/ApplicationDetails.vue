@@ -9,19 +9,19 @@
           mobile-breakpoint="sm"
         >
           <v-tab class="text-left" @click="$router.go(-1)">
-            <v-icon left class="mr-1">mdi-arrow-left-bold-outline</v-icon> Back
+            <v-icon left class="mr-1">mdi-arrow-left-bold-outline</v-icon> 后退
           </v-tab>
           <v-tab class="text-left">
-            <v-icon left class="mr-1">mdi-information-outline</v-icon>Info
+            <v-icon left class="mr-1">mdi-information-outline</v-icon>信息
           </v-tab>
           <v-tab class="text-left">
-            <v-icon left class="mr-1">mdi-view-list-outline</v-icon>Processes
+            <v-icon left class="mr-1">mdi-view-list-outline</v-icon>进程
           </v-tab>
           <v-tab class="text-left">
-            <v-icon left class="mr-1">mdi-book-open-outline</v-icon>Logs
+            <v-icon left class="mr-1">mdi-book-open-outline</v-icon>日志
           </v-tab>
           <v-tab class="text-left">
-            <v-icon left class="mr-1">mdi-gauge</v-icon>Stats
+            <v-icon left class="mr-1">mdi-gauge</v-icon>状态
           </v-tab>
         </v-tabs>
         <v-fade-transition>
@@ -78,7 +78,7 @@
                       <v-icon>mdi-file-document-edit-outline</v-icon>
                     </v-btn>
                   </template>
-                  <span>Edit</span>
+                  <span>编辑</span>
                 </v-tooltip>
                 <v-tooltip bottom>
                   <template v-slot:activator="{ on, attrs }">
@@ -91,7 +91,7 @@
                       ><v-icon>mdi-refresh</v-icon></v-btn
                     >
                   </template>
-                  <span>Refresh</span>
+                  <span>刷新</span>
                 </v-tooltip>
                 <v-menu
                   close-on-click
@@ -115,7 +115,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-file-document-edit-outline</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Edit</v-list-item-title>
+                      <v-list-item-title>编辑</v-list-item-title>
                     </v-list-item>
                     <v-list-item
                       :href="`/api/apps/${app.name}/support`"
@@ -126,7 +126,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-help-circle-outline</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Help</v-list-item-title>
+                      <v-list-item-title>帮助</v-list-item-title>
                     </v-list-item>
                     <v-divider />
                     <v-list-item
@@ -139,7 +139,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-play</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Start</v-list-item-title>
+                      <v-list-item-title>启动</v-list-item-title>
                     </v-list-item>
                     <v-list-item
                       @click="
@@ -151,7 +151,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-stop</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Stop</v-list-item-title>
+                      <v-list-item-title>停止</v-list-item-title>
                     </v-list-item>
                     <v-list-item
                       @click="AppAction({ Name: app.name, Action: 'restart' })"
@@ -159,7 +159,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-refresh</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Restart</v-list-item-title>
+                      <v-list-item-title>重启</v-list-item-title>
                     </v-list-item>
                     <v-divider />
                     <v-list-item
@@ -178,7 +178,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-delete</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Remove</v-list-item-title>
+                      <v-list-item-title>删除</v-list-item-title>
                     </v-list-item>
                   </v-list>
                 </v-menu>
@@ -191,14 +191,13 @@
                       Remove {{ app.name }}?
                     </v-card-title>
                     <v-card-text>
-                      Are you sure you want to permanently delete the
-                      template?<br />
-                      This action cannot be revoked.
+                     您确定要永久删除该模板吗？<br />
+                      此操作无法撤销。
                     </v-card-text>
                     <v-card-actions>
                       <v-spacer></v-spacer>
                       <v-btn text @click="removeDialog = false">
-                        Cancel
+                        返回
                       </v-btn>
                       <v-btn
                         text
@@ -209,7 +208,7 @@
                           postRemove();
                         "
                       >
-                        Delete
+                        删除
                       </v-btn>
                     </v-card-actions>
                   </v-card>

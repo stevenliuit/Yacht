@@ -2,7 +2,7 @@
   <div>
     <v-card color="foreground">
       <v-card-title class="primary font-weight-bold">
-        Theme Settings
+        主题设置
       </v-card-title>
       <v-card-text>
         <h2 class="mt-2">Colors:</h2>
@@ -11,22 +11,22 @@
           <v-btn
             :color="$vuetify.theme.themes[theme].primary"
             class="secondary--text"
-            >Primary</v-btn
+            >基本设置</v-btn
           >
           <v-btn
             :color="$vuetify.theme.themes[theme].secondary"
             class="primary--text"
-            >Secondary</v-btn
+            >非必要设置</v-btn
           >
           <v-btn
             :color="$vuetify.theme.themes[theme].background"
             class="primary--text"
-            >Background</v-btn
+            >背景</v-btn
           >
           <v-btn
             :color="$vuetify.theme.themes[theme].foreground"
             class="primary--text"
-            >Foreground</v-btn
+            >前景设置</v-btn
           >
           <v-btn
             :color="$vuetify.theme.themes[theme].tabs"
@@ -53,7 +53,7 @@
       </v-card-text>
       <v-btn class="ml-2 mb-2" @click="setTheme" color="primary">set</v-btn>
       <v-btn class="ml-2 mb-2" @click="resetTheme" color="secondary"
-        >reset</v-btn
+        >重置</v-btn
       >
     </v-card>
   </div>

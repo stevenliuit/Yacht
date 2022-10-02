@@ -19,7 +19,7 @@
             <v-icon>mdi-account-settings-outline</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            User
+            用户
           </v-list-item-content>
         </v-list-item>
         <v-list-item @click="logout()">
@@ -27,7 +27,7 @@
             <v-icon>mdi-logout-variant</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            Logout
+            退出登录
           </v-list-item-content>
         </v-list-item>
       </v-list>

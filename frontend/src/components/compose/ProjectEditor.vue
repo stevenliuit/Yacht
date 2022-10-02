@@ -14,10 +14,10 @@
           <v-row>
             <v-col class="flex-grow-1 flex-shrink-0">
               <v-card-title v-if="!this.existing" class="mt-1">
-                New Compose Template
+                新的Compose模板
               </v-card-title>
               <v-card-title v-if="this.existing" class="mt-1">
-                Edit {{ this.form.name }} Project
+                编辑 {{ this.form.name }} 项目
               </v-card-title>
             </v-col>
             <v-col class="flex-grow-1 flex-shrink-0">
@@ -32,7 +32,7 @@
             </v-col>
             <v-col class="flex-grow-0 flex-shrink-1">
               <v-btn @click="submitCompose()" color="primary" class="mr-2 mt-3"
-                >submit</v-btn
+                >提交</v-btn
               >
             </v-col>
           </v-row>

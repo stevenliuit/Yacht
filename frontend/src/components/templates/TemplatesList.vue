@@ -10,7 +10,7 @@
         />
       </v-fade-transition>
       <v-card-title class="primary font-weight-bold">
-        Templates
+        模板
         <v-btn class="ml-2" color="secondary" to="/templates/new">
           <v-icon>mdi-plus</v-icon>
         </v-btn>
@@ -36,8 +36,7 @@
       >
         <template slot="no-data">
           <div>
-            No templates available. <a href="/#/templates/new">Add</a> one to
-            view information and launch apps from here.
+            没有可用的模板。 <a href="/#/templates/new">添加</a> 一个从这里查看信息和启动应用程序。
           </div>
         </template>
         <template v-slot:item.title="{ item }">
@@ -54,13 +53,13 @@
                   <v-list-item-icon>
                     <v-icon>mdi-eye</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>View</v-list-item-title>
+                  <v-list-item-title>查看</v-list-item-title>
                 </v-list-item>
                 <v-list-item @click="updateTemplate(item.id)">
                   <v-list-item-icon>
                     <v-icon>mdi-update</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Update</v-list-item-title>
+                  <v-list-item-title>更新</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -72,7 +71,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-delete</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Delete</v-list-item-title>
+                  <v-list-item-title>删除</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -90,16 +89,16 @@
     <v-dialog v-if="selectedTemplate" v-model="deleteDialog" max-width="290">
       <v-card>
         <v-card-title class="headline" style="word-break: break-all;">
-          Delete the template?
+          删除模板？
         </v-card-title>
         <v-card-text>
-          Are you sure you want to permanently delete the template?<br />
-          This action cannot be revoked.
+          您确定要永久删除该模板吗？<br />
+          此操作无法撤销。
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn text @click="deleteDialog = false">
-            Cancel
+            返回
           </v-btn>
           <v-btn
             text
@@ -109,7 +108,7 @@
               deleteDialog = false;
             "
           >
-            Delete
+            删除
           </v-btn>
         </v-card-actions>
       </v-card>

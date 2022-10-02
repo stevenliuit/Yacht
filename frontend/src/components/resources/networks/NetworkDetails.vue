@@ -47,12 +47,12 @@
     </v-card>
     <v-card color="foreground" class="mt-2">
       <v-card-title>
-        Network Information
+        网络信息
       </v-card-title>
       <v-list color="foreground" dense>
         <v-list-item>
           <v-list-item-content>
-            Name
+            名称
           </v-list-item-content>
           <v-list-item-content>
             {{ network.Name }}
@@ -108,7 +108,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            Created
+            已创建
           </v-list-item-content>
           <v-list-item-content>
             {{ network.Created | formatDate }}
@@ -146,7 +146,7 @@
 
     <v-card color="foreground" class="mt-2">
       <v-card-title>
-        Network Details
+        网络详细信息
       </v-card-title>
       <v-list color="foreground" dense>
         <v-list-item>
@@ -189,7 +189,7 @@
         </v-list-item>
         <v-list-item v-if="Object.keys(network.Options).length > 0">
           <v-list-item-content style="max-width: 30%">
-            Options
+            选项
           </v-list-item-content>
           <v-list-item-content>
             <v-card outlined tile>
@@ -219,7 +219,7 @@
 
     <v-card color="foreground" class="mt-2">
       <v-card-title>
-        Attached Containers
+        附加容器
       </v-card-title>
       <v-data-table
         style="max-width: 99%;"
@@ -230,7 +230,7 @@
       >
         <template slot="no-data">
           <div>
-            No Networks available.
+            没有可用的网络。
           </div>
         </template>
         <template v-slot:item.Name="{ item }">

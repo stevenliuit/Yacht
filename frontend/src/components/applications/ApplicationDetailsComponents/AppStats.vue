@@ -1,16 +1,16 @@
 <template>
   <v-card color="foreground" class="mx-4 my-2" raised>
-    <v-card-title class="primary font-weight-bold"> Stats </v-card-title>
+    <v-card-title class="primary font-weight-bold"> 统计数据 </v-card-title>
     <v-card-text
       v-if="app.State.Status != 'running'"
       class="secondary text-center px-5 py-5"
     >
-      Start the app to view stats
+      启动应用程序以查看统计信息
     </v-card-text>
     <div v-else>
       <v-card color="foreground" flat>
         <v-card-title>
-          CPU Usage {{ stats.cpu_percent[stats.cpu_percent.length - 1] }}%
+          CPU 使用率 {{ stats.cpu_percent[stats.cpu_percent.length - 1] }}%
         </v-card-title>
         <v-card-subtitle>
           (0-100%) <br />
@@ -20,7 +20,7 @@
       </v-card>
       <v-card color="foreground" flat>
         <v-card-title>
-          Memory Usage {{ stats.mem_percent[stats.mem_percent.length - 1] }}%,
+          内存使用率 {{ stats.mem_percent[stats.mem_percent.length - 1] }}%,
           {{ formatBytes(stats.mem_current[stats.mem_current.length - 1]) }}/{{
             formatBytes(stats.mem_total[stats.mem_total.length - 1])
           }}

@@ -10,7 +10,7 @@
         />
       </v-fade-transition>
       <v-card-title class="primary font-weight-bold">
-        Projects
+        项目
         <v-btn class="ml-2" color="secondary" to="/projects/_/edit">
           <v-icon>mdi-plus</v-icon>
         </v-btn>
@@ -24,7 +24,7 @@
         ></v-text-field>
       </v-card-title>
       <v-card-subtitle v-if="action"
-        >Running docker-compose {{ action }} ...</v-card-subtitle
+        >运行 docker-compose {{ action }} ...</v-card-subtitle
       >
 
       <v-data-table
@@ -41,7 +41,7 @@
       >
         <template slot="no-data">
           <div>
-            No Projects available.
+            没有可用的项目。
           </div>
         </template>
         <template v-slot:item.name="{ item }">
@@ -89,7 +89,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-play</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Start</v-list-item-title>
+                      <v-list-item-title>启动</v-list-item-title>
                     </v-list-item>
                     <v-list-item
                       @click="
@@ -99,7 +99,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-stop</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Stop</v-list-item-title>
+                      <v-list-item-title>停止</v-list-item-title>
                     </v-list-item>
                     <v-list-item
                       @click="
@@ -109,7 +109,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-refresh</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Restart</v-list-item-title>
+                      <v-list-item-title>重启</v-list-item-title>
                     </v-list-item>
                     <v-divider />
                     <v-list-item
@@ -120,7 +120,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-update</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Pull</v-list-item-title>
+                      <v-list-item-title>拉取</v-list-item-title>
                     </v-list-item>
                     <v-list-item
                       @click="
@@ -130,7 +130,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-plus-box-multiple</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Create</v-list-item-title>
+                      <v-list-item-title>创建</v-list-item-title>
                     </v-list-item>
                     <v-divider />
                     <v-list-item
@@ -150,7 +150,7 @@
                       <v-list-item-icon>
                         <v-icon>mdi-delete</v-icon>
                       </v-list-item-icon>
-                      <v-list-item-title>Remove</v-list-item-title>
+                      <v-list-item-title>删除</v-list-item-title>
                     </v-list-item>
                   </v-list>
                 </v-list-group>
@@ -158,13 +158,13 @@
                   <v-list-item-icon>
                     <v-icon>mdi-eye</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>View</v-list-item-title>
+                  <v-list-item-title>查看</v-list-item-title>
                 </v-list-item>
                 <v-list-item @click="editProject(item.name)">
                   <v-list-item-icon>
                     <v-icon>mdi-file-document-edit-outline</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Edit</v-list-item-title>
+                  <v-list-item-title>编辑</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -176,7 +176,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-delete</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Delete</v-list-item-title>
+                  <v-list-item-title>删除</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -222,16 +222,15 @@
     <v-dialog v-if="selectedProject" v-model="deleteDialog" max-width="400">
       <v-card>
         <v-card-title class="headline" style="word-break: break-all;">
-          Delete {{ selectedProject["name"] }} project?
+          删除 {{ selectedProject["name"] }} 项目?
         </v-card-title>
         <v-card-text>
-          The project directory and all files within it will be permanently
-          deleted. This action cannot be revoked.
+          项目目录和其中的所有文件将被永久删除。 此操作无法撤销。
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn text @click="deleteDialog = false">
-            Cancel
+            返回
           </v-btn>
           <v-btn
             text
@@ -241,7 +240,7 @@
               deleteDialog = false;
             "
           >
-            Delete
+            删除
           </v-btn>
         </v-card-actions>
       </v-card>

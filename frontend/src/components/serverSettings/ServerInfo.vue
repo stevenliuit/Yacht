@@ -1,11 +1,11 @@
 <template>
   <v-card color="foreground" class="elevation-12">
     <v-toolbar color="primary" dark flat>
-      <v-toolbar-title>Server Settings</v-toolbar-title>
+      <v-toolbar-title>服务器设置</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
     <v-card-text>
-      This is where you can change settings related to your server.
+      您可以在此处更改与服务器相关的设置。
     </v-card-text>
     <h2 class="font-weight-bold ml-5">Import</h2>
     <ValidationObserver ref="obs1" v-slot="{ invalid }">
@@ -31,12 +31,12 @@
         color="primary"
         :disabled="invalid"
         @click="import_settings(importFile)"
-        >Import
+        >导入
       </v-btn>
     </ValidationObserver>
     <h2 class="font-weight-bold mt-5 ml-5">Export</h2>
     <v-btn class="mx-5 mb-5" color="primary" @click="export_settings()"
-      >Export
+      >导出
     </v-btn>
   </v-card>
 </template>

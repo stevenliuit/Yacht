@@ -19,10 +19,10 @@
           </template>
           <v-card color="foreground">
             <v-card-title class="headline" style="word-break: break-all;">
-              Pull Image
+              拉取 Image
             </v-card-title>
             <v-card-text>
-              Pull an image.
+              拉取一个 image.
             </v-card-text>
             <form ref="form" @submit.prevent="submit">
               <v-text-field
@@ -37,7 +37,7 @@
             <v-card-actions>
               <v-spacer />
               <v-btn text @click="pullDialog = false">
-                Cancel
+                返回
               </v-btn>
               <v-btn
                 text
@@ -47,7 +47,7 @@
                   pullDialog = false;
                 "
               >
-                Pull
+                拉取
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -76,7 +76,7 @@
       >
         <template slot="no-data">
           <div>
-            No Images available.
+            没有 Images 可用.
           </div>
         </template>
         <template v-slot:item.RepoTags="{ item }">
@@ -121,7 +121,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-update</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Pull</v-list-item-title>
+                  <v-list-item-title>拉取</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -133,7 +133,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-delete</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Delete</v-list-item-title>
+                  <v-list-item-title>删除</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -158,16 +158,16 @@
     <v-dialog v-if="selectedImage" v-model="deleteDialog" max-width="290">
       <v-card>
         <v-card-title class="headline" style="word-break: break-all;">
-          Delete the image?
+          删除 image?
         </v-card-title>
         <v-card-text>
-          Are you sure you want to permanently delete the image?<br />
-          This action cannot be revoked.
+          您确定要永久删除该image吗？<br />
+          此操作无法撤销。
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn text @click="deleteDialog = false">
-            Cancel
+            返回
           </v-btn>
           <v-btn
             text
@@ -177,7 +177,7 @@
               deleteDialog = false;
             "
           >
-            Delete
+            删除
           </v-btn>
         </v-card-actions>
       </v-card>

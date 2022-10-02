@@ -49,7 +49,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-play</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Start</v-list-item-title>
+                  <v-list-item-title>启动</v-list-item-title>
                 </v-list-item>
                 <v-list-item
                   @click="ProjectAction({ Name: project.name, Action: 'stop' })"
@@ -57,7 +57,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-stop</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Stop</v-list-item-title>
+                  <v-list-item-title>停止</v-list-item-title>
                 </v-list-item>
                 <v-list-item
                   @click="
@@ -67,7 +67,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-refresh</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Restart</v-list-item-title>
+                  <v-list-item-title>重启</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -76,7 +76,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-update</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Pull</v-list-item-title>
+                  <v-list-item-title>拉取</v-list-item-title>
                 </v-list-item>
                 <v-list-item
                   @click="
@@ -86,7 +86,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-plus-box-multiple</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Create</v-list-item-title>
+                  <v-list-item-title>创建</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -104,14 +104,14 @@
                   <v-list-item-icon>
                     <v-icon>mdi-delete</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Remove</v-list-item-title>
+                  <v-list-item-title>移除</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
           </v-col>
           <v-col class="text-right">
             <v-btn @click="editProject(project.name)">
-              Edit
+              编辑
               <v-icon>mdi-file-document-edit-outline</v-icon>
             </v-btn>
             <v-btn
@@ -121,7 +121,7 @@
               "
               color="error"
             >
-              Delete
+              删除
               <v-icon>mdi-trash-can-outline</v-icon>
             </v-btn>
           </v-col>
@@ -135,19 +135,19 @@
       <v-card-title> Project Details </v-card-title>
       <v-list color="foreground" dense>
         <v-list-item>
-          <v-list-item-content> Name </v-list-item-content>
+          <v-list-item-content> 名称 </v-list-item-content>
           <v-list-item-content>
             {{ project.name }}
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
-          <v-list-item-content> Path </v-list-item-content>
+          <v-list-item-content> 路径 </v-list-item-content>
           <v-list-item-content>
             {{ project.path }}
           </v-list-item-content>
         </v-list-item>
         <v-list-item>
-          <v-list-item-content> Version </v-list-item-content>
+          <v-list-item-content> 版本 </v-list-item-content>
           <v-list-item-content>
             {{ project.version }}
           </v-list-item-content>
@@ -205,7 +205,7 @@
                     "
                   >
                     <v-icon small>mdi-play</v-icon>
-                    start
+                    启动
                   </v-btn>
                   <v-btn
                     small
@@ -218,7 +218,7 @@
                     "
                   >
                     <v-icon small>mdi-stop</v-icon>
-                    stop
+                    停止
                   </v-btn>
                   <v-btn
                     small
@@ -231,7 +231,7 @@
                     "
                   >
                     <v-icon small>mdi-refresh</v-icon>
-                    restart
+                    重启
                   </v-btn>
                   <v-divider vertical />
                   <v-btn
@@ -245,7 +245,7 @@
                     "
                   >
                     <v-icon small>mdi-update</v-icon>
-                    pull
+                    拉取
                   </v-btn>
                   <v-divider vertical />
                   <v-btn
@@ -272,13 +272,13 @@
                     "
                   >
                     <v-icon small>mdi-delete</v-icon>
-                    remove
+                    删除
                   </v-btn>
                 </v-item-group>
               </div>
               <v-list color="foreground" dense>
                 <v-list-item v-if="project.services[service].container_name">
-                  <v-list-item-content> Container Name </v-list-item-content>
+                  <v-list-item-content> Container 名称 </v-list-item-content>
                   <v-list-item-content>
                     {{ project.services[service].container_name }}
                   </v-list-item-content>
@@ -314,13 +314,13 @@
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item v-if="project.services[service].networks && Array.isArray(project.services[service].networks)">
-                  <v-list-item-content> Networks </v-list-item-content>
+                  <v-list-item-content> 网络 </v-list-item-content>
                   <v-list-item-content>
                     {{ project.services[service].networks.join(", ") }}
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item v-else-if="project.services[service].networks && typeof project.services[service].networks === 'object'">
-                  <v-list-item-content> Networks </v-list-item-content>
+                  <v-list-item-content> 网络 </v-list-item-content>
                   <v-list-item-content v-for="(content, network) in project.services[service].networks" :key="network">
                     {{ network }}, {{ content[Object.keys(content)[0]] }}
                   </v-list-item-content>
@@ -338,8 +338,8 @@
                       <v-simple-table class="secondary" dense>
                         <thead>
                           <tr>
-                            <th>Host</th>
-                            <th>Container</th>
+                            <th>主机</th>
+                            <th>容器</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -361,14 +361,14 @@
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item v-if="project.services[service].environment">
-                  <v-list-item-content> Environment </v-list-item-content>
+                  <v-list-item-content> 环境变量 </v-list-item-content>
                   <v-list-item-content>
                     <v-card outlined tile>
                       <v-simple-table class="secondary" dense>
                         <thead>
                           <tr>
-                            <th>Variable</th>
-                            <th>Value</th>
+                            <th>变量</th>
+                            <th>值</th>
                           </tr>
                         </thead>
                         <tbody
@@ -412,14 +412,14 @@
                   </v-list-item-content>
                 </v-list-item>
                 <v-list-item v-if="project.services[service].labels">
-                  <v-list-item-content> Labels </v-list-item-content>
+                  <v-list-item-content> 标签 </v-list-item-content>
                   <v-list-item-content>
                     <v-card outlined tile>
                       <v-simple-table class="secondary" dense>
                         <thead>
                           <tr>
-                            <th>Label</th>
-                            <th>Value</th>
+                            <th>标签</th>
+                            <th>值</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -490,10 +490,9 @@
       </v-card-text>
     </v-card>
     <v-card color="foreground" class="mt-2">
-      <v-card-title> Download Support Bundle </v-card-title>
+      <v-card-title> 下载支持包 </v-card-title>
       <v-card-text>
-        Download the logs and docker-compose to get help with your
-        project</v-card-text
+        下载日志和 docker-compose 以获得项目帮助</v-card-text
       >
       <v-btn
         :href="`/api/compose/${project.name}/support`"
@@ -501,17 +500,16 @@
         class="mb-2 ml-2"
         color="primary"
         download
-        >Download</v-btn
+        >下载</v-btn
       >
     </v-card>
     <v-dialog v-if="selectedProject" v-model="deleteDialog" max-width="400">
       <v-card>
         <v-card-title class="headline" style="word-break: break-all">
-          Delete {{ selectedProject["name"] }} project?
+          删除 {{ selectedProject["name"] }} 项目?
         </v-card-title>
         <v-card-text>
-          The project directory and all files within it will be permanently
-          deleted. This action cannot be revoked.
+         项目目录和其中的所有文件将被永久删除。此操作无法撤销。
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -524,7 +522,7 @@
               postDelete();
             "
           >
-            Delete
+            删除
           </v-btn>
         </v-card-actions>
       </v-card>

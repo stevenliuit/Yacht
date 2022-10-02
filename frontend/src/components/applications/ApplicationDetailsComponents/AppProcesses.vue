@@ -1,13 +1,13 @@
 <template>
   <v-card color="foreground" class="mx-4 mt-2" raised>
     <v-card-title class="primary font-weight-bold">
-      Processes
+      进程
     </v-card-title>
     <v-card-text
       v-if="app.State.Status != 'running'"
       class="text-center px-5 py-5"
     >
-      Start the app to view processes
+     启动应用程序以查看进程
     </v-card-text>
     <v-simple-table class="foreground" v-else-if="processes">
       <template v-slot:default>
@@ -30,7 +30,7 @@
       </template>
     </v-simple-table>
     <v-card-text v-else>
-      Something Broke >:(
+      东西坏了 >:(
     </v-card-text>
   </v-card>
 </template>

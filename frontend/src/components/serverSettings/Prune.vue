@@ -9,45 +9,44 @@
       />
     </v-fade-transition>
     <v-card-title class="subheading warning font-weight-bold"
-      >Prune</v-card-title
+      >修剪</v-card-title
     >
     <v-card-text class="mt-2"
-      >Delete unused images, volumes, networks, and containers.</v-card-text
+      >删除未使用的映像、卷、网络和容器。</v-card-text
     >
     <v-btn
       class="mx-5 mb-5"
       color="warning"
       @click="prune((resource = 'images'))"
     >
-      Prune Images
+      修剪 Images
     </v-btn>
     <v-btn
       class="mx-5 mb-5"
       color="warning"
       @click="prune((resource = 'networks'))"
     >
-      Prune Networks
+      修剪 Networks
     </v-btn>
     <v-btn
       class="mx-5 mb-5"
       color="warning"
       @click="prune((resource = 'volumes'))"
     >
-      Prune Volumes
+      修剪 Volumes
     </v-btn>
     <v-dialog max-width="290" v-model="containerDialog">
       <template v-slot:activator="{ on, attrs }">
         <v-btn class="mx-5 mb-5" color="warning" v-bind="attrs" v-on="on">
-          Prune Containers
+          修剪 Containers
         </v-btn>
       </template>
       <v-card>
         <v-card-title>
-          Prune Containers
+          修剪 Containers
         </v-card-title>
         <v-card-text>
-          This will remove all stopped containers. Please make sure this is what
-          you want to do before continuing.
+          这将删除所有停止的容器。 在继续之前，请确保这是您想要做的。
         </v-card-text>
         <v-card-actions color="background">
           <v-spacer></v-spacer>
@@ -58,7 +57,7 @@
               containerDialog = false;
               prune((resource = 'containers'));
             "
-            >Continue</v-btn
+            >继续</v-btn
           >
         </v-card-actions>
       </v-card>

@@ -12,21 +12,21 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+          欢迎来到Vuetify
         </h1>
 
         <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br />please join our online
+          如需与其他 Vuetify 开发人员的帮助和协作，
+          <br />请加入我们的在线
           <a href="https://community.vuetifyjs.com" target="_blank"
-            >Discord Community test</a
+            >Discord 社区测试</a
           >
         </p>
       </v-col>
 
       <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">
-          What's next?
+          下一步是什么？
         </h2>
 
         <v-row justify="center">
@@ -44,7 +44,7 @@
 
       <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">
-          Important Links
+          重要链接
         </h2>
 
         <v-row justify="center">

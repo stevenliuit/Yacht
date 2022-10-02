@@ -5,14 +5,14 @@
       <v-btn
         v-if="!this.$route.params.appId && !this.$route.params.appName"
         tile
-        :to="{ name: 'Deploy from Template' }"
+        :to="{ name: '从模板Deploy' }"
         class="primary float-right"
       >
-        <v-icon>mdi-plus</v-icon> From Template
+        <v-icon>mdi-plus</v-icon> 从模板
       </v-btn>
     </h1>
     <v-card v-if="notes" color="blue-grey darken-2" class="mb-2">
-      <v-card-title>Note:</v-card-title>
+      <v-card-title>注:</v-card-title>
       <v-card-text v-html="notes"></v-card-text>
     </v-card>
     <v-stepper class="foreground" v-model="deployStep" alt-labels non-linear>
@@ -31,7 +31,7 @@
           edit-icon="mdi-check"
           :complete="deployStep > 1"
         >
-          General
+          通用
         </v-stepper-step>
         <v-divider></v-divider>
         <v-stepper-step
@@ -115,7 +115,7 @@
               :disabled="invalid"
               class="float-right"
             >
-              Continue
+              继续
             </v-btn>
           </ValidationObserver>
         </v-stepper-content>
@@ -257,14 +257,14 @@
               :disabled="invalid"
               class="float-right"
             >
-              Continue
+              继续
             </v-btn>
             <v-btn
               color="secondary"
               @click="deployStep = 1"
               class="mx-2 float-right primary--text"
             >
-              Back
+              返回
             </v-btn>
           </ValidationObserver>
         </v-stepper-content>
@@ -335,14 +335,14 @@
               :disabled="invalid"
               class="float-right"
             >
-              Continue
+              继续
             </v-btn>
             <v-btn
               color="secondary"
               @click="deployStep = 2"
               class="mx-2 float-right primary--text"
             >
-              Back
+              返回
             </v-btn>
           </ValidationObserver>
         </v-stepper-content>
@@ -447,7 +447,7 @@
               @click="deployStep = 3"
               class="mx-2 float-right primary--text"
             >
-              Back
+              返回
             </v-btn>
           </ValidationObserver>
         </v-stepper-content>
@@ -455,7 +455,7 @@
     </v-stepper>
     <v-card color="primary" class="mt-5">
       <v-card-title>
-        Advanced
+        高级
       </v-card-title>
       <v-expansion-panels flat accordion multiple focusable>
         <v-expansion-panel>
@@ -766,17 +766,15 @@
     <v-dialog v-model="editDialog" max-width="290">
       <v-card>
         <v-card-title class="headline" style="word-break: break-all;">
-          Are you sure you want to edit this container?
+          您确定要编辑此容器吗？
         </v-card-title>
         <v-card-text>
-          This will remove the currently running container and deploy a new one
-          with the settings in this form. Please make sure your container data
-          is persistant or backed up.
+          这将删除当前正在运行的容器并使用此表单中的设置部署一个新容器。 请确保您的容器数据是持久的或备份的。
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn text @click="editDialog = false">
-            Cancel
+            返回
           </v-btn>
           <v-btn
             text
@@ -786,7 +784,7 @@
               editDialog = false;
             "
           >
-            Edit
+            编辑
           </v-btn>
         </v-card-actions>
       </v-card>

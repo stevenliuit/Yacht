@@ -12,14 +12,14 @@
         </v-fade-transition>
 
         <v-card-title class="headline" style="word-break: break-all;">
-          Create Network
+          创建 Network
         </v-card-title>
         <v-card-text>
-          Create a new Network.
+          创建一个新的网络。
         </v-card-text>
         <form ref="form" @submit.prevent="submit">
           <v-card-text>
-            General
+            一般的
           </v-card-text>
 
           <ValidationProvider
@@ -180,7 +180,7 @@
         <v-card-actions>
           <v-spacer />
           <v-btn text @click="createDialog = false">
-            Cancel
+            返回
           </v-btn>
           <v-btn
             text
@@ -191,7 +191,7 @@
               createDialog = false;
             "
           >
-            Create
+            创建
           </v-btn>
         </v-card-actions>
       </ValidationObserver>

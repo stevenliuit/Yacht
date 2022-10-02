@@ -49,7 +49,7 @@
     </v-card>
     <v-card color="foreground" class="mt-2">
       <v-card-title>
-        Image Details
+        Image 详细
       </v-card-title>
       <v-list color="foreground" dense>
         <v-list-item>
@@ -62,7 +62,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            Architecture
+            结构
           </v-list-item-content>
           <v-list-item-content>
             {{ image.Architecture }}
@@ -70,7 +70,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            Platform
+            框架
           </v-list-item-content>
           <v-list-item-content>
             {{ image.Os }}
@@ -78,7 +78,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            Architecture
+            结构
           </v-list-item-content>
           <v-list-item-content>
             {{ image.Architecture }}
@@ -86,7 +86,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            Created
+            已创建
           </v-list-item-content>
           <v-list-item-content>
             {{ image.Created | formatDate }}
@@ -94,7 +94,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            Size
+            大小
           </v-list-item-content>
           <v-list-item-content>
             {{ formatBytes(image.Size) }}
@@ -102,7 +102,7 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            VirtualSize
+            虚拟机大小
           </v-list-item-content>
           <v-list-item-content>
             {{ formatBytes(image.VirtualSize) }}
@@ -113,12 +113,12 @@
 
     <v-card class="mt-2" color="foreground">
       <v-card-title>
-        Container Details
+        Container 详细
       </v-card-title>
       <v-list dense color="foreground">
         <v-list-item v-if="getCMD(image.ContainerConfig.Cmd)">
           <v-list-item-content style="max-width:20%">
-            Command
+            命令
           </v-list-item-content>
           <v-list-item-content>
             {{ getCMD(image.ContainerConfig.Cmd) }}
@@ -147,7 +147,7 @@
         </v-list-item>
         <v-list-item v-if="image.ContainerConfig.Labels">
           <v-list-item-content style="max-width:20%">
-            Labels
+            标签
           </v-list-item-content>
           <v-list-item-content>
             <v-card outlined tile>
@@ -174,7 +174,7 @@
         </v-list-item>
         <v-list-item v-if="image.ContainerConfig.Env">
           <v-list-item-content style="max-width:20%">
-            ENV
+            环境变量
           </v-list-item-content>
           <v-list-item-content>
             <v-card outlined tile>

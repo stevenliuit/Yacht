@@ -10,10 +10,10 @@
         />
       </v-fade-transition>
       <v-card-title>
-        New Template
+        新模板
       </v-card-title>
       <v-card-text v-if="templates.length < 1">
-        Consider adding templates crafted for Yacht below or creating your own
+        考虑在下面添加为 Yacht 制作的模板或创建自己的模板
         with <a href="https://shipwright.yacht.sh">Shipwright</a> <br />
         https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Template/yacht.json
       </v-card-text>

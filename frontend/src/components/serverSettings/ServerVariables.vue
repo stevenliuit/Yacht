@@ -1,7 +1,7 @@
 <template>
   <v-card color="foreground" class="elevation-12 pb-8">
     <v-toolbar color="primary" dark flat>
-      <v-toolbar-title>Server Template Variables</v-toolbar-title>
+      <v-toolbar-title>服务器模板变量</v-toolbar-title>
     </v-toolbar>
     <v-card-text>
       <ValidationObserver v-slot="{ invalid }">
@@ -69,16 +69,16 @@
             @click="submitFormData()"
             color="primary"
             :disabled="invalid"
-            >Save</v-btn
+            >保存</v-btn
           >
         </form>
       </ValidationObserver>
     </v-card-text>
     <v-snackbar v-model="saved" bottom color="secondary">
-      Saved
+      保存
       <template v-slot:action="{ attrs }">
         <v-btn color="primary" text v-bind="attrs" @click="saved = false">
-          Close
+          关闭
         </v-btn>
       </template>
     </v-snackbar>

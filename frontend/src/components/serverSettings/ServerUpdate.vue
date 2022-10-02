@@ -9,13 +9,12 @@
       />
     </v-fade-transition>
     <v-card-title class="subheading primary font-weight-bold"
-      >Update</v-card-title
+      >更新</v-card-title
     >
     <v-card-text class="mt-2"
-      >Update Yacht to the latest version. <br />
-      Note: This will spin up a run-once watchtower instance and update Yacht.
-      In the process Yacht will be restarted and you will be logged
-      out.</v-card-text
+      > 将Yacht更新到最新版本。<br />
+      注意：这将启动一个运行一次的watchtower实例并更新 Yacht。
+      在此过程中，Yacht将重新启动，您将被注销。</v-card-text
     >
     <v-btn
       class="mx-5 mb-5"
@@ -23,7 +22,7 @@
       @click="update()"
       :disabled="!updatable"
     >
-      Update Yacht
+      更新 Yacht
     </v-btn>
   </v-card>
 </template>

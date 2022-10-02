@@ -42,7 +42,7 @@
       >
         <template slot="no-data">
           <div>
-            No Networks available.
+            没有可用的网络。
           </div>
         </template>
         <template v-slot:item.Name="{ item }">
@@ -78,7 +78,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-eye</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>View</v-list-item-title>
+                  <v-list-item-title>查看</v-list-item-title>
                 </v-list-item>
                 <v-divider />
                 <v-list-item
@@ -90,7 +90,7 @@
                   <v-list-item-icon>
                     <v-icon>mdi-delete</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-title>Delete</v-list-item-title>
+                  <v-list-item-title>删除</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>

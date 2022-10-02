@@ -2,11 +2,10 @@
   <ValidationObserver ref="obs1" v-slot="{ invalid }">
     <v-card color="foreground" class="elevation-12 pb-8">
       <v-toolbar color="primary" dark flat>
-        <v-toolbar-title>Change Password</v-toolbar-title>
+        <v-toolbar-title>修改密码</v-toolbar-title>
       </v-toolbar>
       <v-card-text>
-        You can also change just your email here (or both your email and
-        password).
+        您也可以在此处仅更改您的电子邮件（或同时更改您的电子邮件和密码）
         <v-form @keyup.native.enter="onSubmit()">
           <ValidationProvider
             name="username"
@@ -59,7 +58,7 @@
             @click="onSubmit()"
             color="primary"
             :disabled="invalid"
-            >Change User Info</v-btn
+            >修改用户信息</v-btn
           >
         </v-form>
       </v-card-text>

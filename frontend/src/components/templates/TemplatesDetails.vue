@@ -63,7 +63,7 @@
                   appDetailsDialog = true;
                 "
               >
-                View
+                查看
               </v-btn>
               <v-spacer></v-spacer>
               <v-btn
@@ -71,7 +71,7 @@
                 color="primary"
                 :to="{ name: 'Deploy', params: { appId: item.id } }"
               >
-                Deploy
+                部署
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -112,7 +112,7 @@
           <p v-if="selectedApp.notes" v-html="selectedApp.notes" />
           <v-card tile>
             <v-card-title class="subheading primary font-weight-bold">
-              General
+              生成
             </v-card-title>
             <v-divider />
             <v-list class="secondary" dense>
@@ -120,7 +120,7 @@
                 <v-list-item-content
                   ><v-list-item-title
                     class="px-5 text-centered font-weight-bold"
-                    >Name</v-list-item-title
+                    >名称</v-list-item-title
                   ></v-list-item-content
                 >
 
@@ -134,7 +134,7 @@
                 <v-list-item-content
                   ><v-list-item-title
                     class="px-5 text-centered font-weight-bold"
-                    >Image</v-list-item-title
+                    >镜像</v-list-item-title
                   ></v-list-item-content
                 >
                 <v-list-item-content>
@@ -154,7 +154,7 @@
                 <v-list-item-content
                   ><v-list-item-title
                     class="px-5 text-centered font-weight-bold"
-                    >Platform</v-list-item-title
+                    >框架</v-list-item-title
                   ></v-list-item-content
                 >
                 <v-list-item-content>
@@ -169,7 +169,7 @@
                   <v-list-item-title
                     class="px-5 text-centered font-weight-bold"
                   >
-                    Command
+                    命令
                   </v-list-item-title>
                 </v-list-item-content>
                 <v-list-item-content>
@@ -198,7 +198,7 @@
                 <v-list-item-content
                   ><v-list-item-title
                     class="px-5 text-centered font-weight-bold"
-                    >Label</v-list-item-title
+                    >标签</v-list-item-title
                   ></v-list-item-content
                 >
                 <v-list-item-content
@@ -275,7 +275,7 @@
 
           <v-card v-if="selectedApp.env" tile>
             <v-card-title class="subheading green darken-3 font-weight-bold">
-              Env Variables
+              环境变量
             </v-card-title>
             <v-divider />
             <v-list dense class="secondary">
@@ -283,19 +283,19 @@
                 <v-list-item-content
                   ><v-list-item-title
                     class="px-5 text-centered font-weight-bold"
-                    >Label</v-list-item-title
+                    >标签</v-list-item-title
                   ></v-list-item-content
                 >
                 <v-list-item-content
                   ><v-list-item-title
                     class="px-5 text-centered font-weight-bold"
-                    >Name</v-list-item-title
+                    >名称</v-list-item-title
                   ></v-list-item-content
                 >
                 <v-list-item-content
                   ><v-list-item-title
                     class="px-5 text-centered font-weight-bold"
-                    >Default</v-list-item-title
+                    >默认</v-list-item-title
                   ></v-list-item-content
                 >
               </v-list-item>
@@ -324,14 +324,14 @@
           <v-spacer></v-spacer>
 
           <v-btn text @click="appDetailsDialog = false">
-            Cancel
+            返回
           </v-btn>
           <v-btn
             text
             color="primary"
             :to="{ name: 'Deploy', params: { appId: selectedApp.id } }"
           >
-            Deploy
+            部署
           </v-btn>
         </v-card-actions>
       </v-card>

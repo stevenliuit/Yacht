@@ -6,7 +6,7 @@
         <v-col cols="12" sm="8" md="4">
           <v-card color="foreground" class="elevation-12 pb-8">
             <v-toolbar color="primary" dark flat>
-              <v-toolbar-title>Login</v-toolbar-title>
+              <v-toolbar-title>登录</v-toolbar-title>
               <v-spacer></v-spacer>
             </v-toolbar>
             <v-card-text>
@@ -47,7 +47,7 @@
                   @click="onSubmit()"
                   color="primary"
                   :disabled="invalid || !validated"
-                  >Login</v-btn
+                  >登录</v-btn
                 >
               </v-form>
             </v-card-text>

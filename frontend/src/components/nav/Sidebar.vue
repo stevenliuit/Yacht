@@ -65,40 +65,40 @@ export default {
       {
         to: "/",
         icon: "mdi-view-dashboard",
-        text: "Dashboard",
+        text: "图表",
         divider: true
       },
       {
-        text: "Applications",
+        text: "应用",
         to: "/apps",
         icon: "mdi-application"
       },
       {
-        text: "Templates",
+        text: "模板",
         to: "/templates",
         icon: "mdi-folder"
       },
       {
-        text: "Projects",
+        text: "项目",
         to: "/projects",
         icon: "mdi-book-open"
       },
       {
         icon: "mdi-cube-outline",
-        text: "Resources",
+        text: "资源",
         subLinks: [
           {
-            text: "Images",
+            text: "镜像",
             to: "/resources/images",
             icon: "mdi-disc"
           },
           {
-            text: "Volumes",
+            text: "存储卷",
             to: "/resources/volumes",
             icon: "mdi-database"
           },
           {
-            text: "Networks",
+            text: "网络",
             to: "/resources/networks",
             icon: "mdi-network"
           }
@@ -107,7 +107,7 @@ export default {
       {
         to: "/settings/info",
         icon: "mdi-cog",
-        text: "Settings"
+        text: "设置"
       }
     ]
   })

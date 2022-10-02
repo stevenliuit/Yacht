@@ -1,12 +1,12 @@
 <template>
   <v-card color="foreground" class="elevation-12 pb-8">
     <v-toolbar color="primary" dark flat>
-      <v-toolbar-title>User Settings</v-toolbar-title>
+      <v-toolbar-title>用户设置</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
     <v-progress-linear indeterminate v-if="isLoading" />
     <v-card-text>
-      This is where you can change settings related to your user account.
+      您可以在此处更改与您的用户帐户相关的设置。
     </v-card-text>
     <h2 class="font-weight-bold ml-5">
       API Keys
@@ -18,13 +18,10 @@
         </template>
         <v-card>
           <v-card-title class="primary">
-            Generate API Key
+            生成 API Key
           </v-card-title>
           <v-card-text>
-            API Keys should be treated as a password and should only be provided
-            to applications you trust. Once this box is closed you will be
-            unable to retrive this key so be sure to copy it and test your
-            application first.
+           API 密钥应被视为密码，并且仅应提供给您信任的应用程序。 关闭此框后，您将无法检索此密钥，因此请务必先复制它并测试您的应用程序。
             <br />
             <v-form>
               <v-text-field
@@ -35,11 +32,11 @@
               </v-text-field>
             </v-form>
             <v-btn v-if="!newKey" class="primary" @click="generate_api_key()">
-              Generate Key</v-btn
+              生成 Key</v-btn
             >
             <br v-if="newKey" />
             <span v-if="newKey" class="font-weight-bold">
-              Generated API Key:</span
+              生成 API Key:</span
             >
             <v-btn
               @click="
@@ -65,7 +62,7 @@
               id="newapikey"
             ></v-textarea>
             <v-snackbar v-model="saved" bottom color="secondary">
-              Copied to clipboard
+              已复制到剪贴板
               <template v-slot:action="{ attrs }">
                 <v-btn
                   color="primary"
@@ -73,7 +70,7 @@
                   v-bind="attrs"
                   @click="saved = false"
                 >
-                  Close
+                  关闭
                 </v-btn>
               </template>
             </v-snackbar>
@@ -87,7 +84,7 @@
                 keyForm.key_name = '';
               "
             >
-              Close
+              关闭
             </v-btn>
           </v-card-actions>
         </v-card>

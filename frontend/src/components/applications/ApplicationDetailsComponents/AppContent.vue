@@ -16,11 +16,11 @@
             <template v-slot:default>
               <tbody>
                 <tr>
-                  <td class="text-left">Name</td>
+                  <td class="text-left">名称</td>
                   <td>{{ app.name }}</td>
                 </tr>
                 <tr>
-                  <td>Image</td>
+                  <td>镜像</td>
                   <td>{{ app.Config.Image.split(":")[0] }}</td>
                 </tr>
                 <tr>
@@ -28,7 +28,7 @@
                   <td>{{ app.short_id }}</td>
                 </tr>
                 <tr>
-                  <td>Status</td>
+                  <td>状态</td>
                   <td>{{ app.State.Status }}</td>
                 </tr>
               </tbody>
@@ -60,7 +60,7 @@
                 v-if="app.State.Status != 'running'"
                 class="foreground text-center px-5 py-5"
               >
-                Start the app to view ports
+                启动应用程序以查看端口
               </v-card-text>
               <v-simple-table v-else class="foreground px-0 text-center">
                 <template v-slot:default>
@@ -127,7 +127,7 @@
                         class="text-center"
                         v-if="app.State.Status == 'running'"
                       >
-                        Gateway
+                        网关
                       </th>
                     </tr>
                   </thead>
@@ -177,8 +177,8 @@
             <template v-slot:default>
               <thead>
                 <tr>
-                  <th class="text-center">Variable</th>
-                  <th class="text-center">Value</th>
+                  <th class="text-center">变量</th>
+                  <th class="text-center">值</th>
                 </tr>
               </thead>
               <tbody>
@@ -248,8 +248,8 @@
             <template v-slot:default>
               <thead>
                 <tr>
-                  <th class="text-center">Label</th>
-                  <th class="text-center">Value</th>
+                  <th class="text-center">标签</th>
+                  <th class="text-center">值</th>
                 </tr>
               </thead>
               <tbody>
@@ -293,8 +293,8 @@
               "
               >Devices</v-tab
             >
-            <v-tab v-if="app.HostConfig.Sysctls">Sysctls</v-tab>
-            <v-tab v-if="app.HostConfig.CapAdd">Capabilities</v-tab>
+            <v-tab v-if="app.HostConfig.Sysctls">系统</v-tab>
+            <v-tab v-if="app.HostConfig.CapAdd">性能</v-tab>
           </v-tabs>
           <v-tabs-items class="foreground" v-model="advanced_tab">
             <v-tab-item v-if="Array.isArray(app.Args) && app.Args.length">
@@ -320,8 +320,8 @@
                 <template v-slot:default>
                   <thead>
                     <tr>
-                      <th>Sysctl</th>
-                      <th>Value</th>
+                      <th>系统控制</th>
+                      <th>值</th>
                     </tr>
                   </thead>
                   <tbody>
